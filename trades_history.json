@@ -1,5 +1,23 @@
 [
   {
+    "id": "1794840669549",
+    "timestamp": "2026-11-16 20:21:09",
+    "symbol": "FFUSDT",
+    "side": "OPEN LONG (BUY)",
+    "trade_direction": "LONG",
+    "type": "MARKET",
+    "price": 0.10003,
+    "quantity": 4998.0,
+    "total_usdt": 499.95,
+    "status": "FILLED",
+    "pnl_pct": null,
+    "pnl_usd": null,
+    "fee_usd": 0.25,
+    "tax_usd": 0.0,
+    "net_pnl_usd": null,
+    "mode": "SIMULATED"
+  },
+  {
     "id": "1794720911159",
     "timestamp": "2026-11-15 11:05:11",
     "symbol": "SKYAIUSDT",

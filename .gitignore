@@ -1,0 +1,29 @@
+# ── Secrets (NEVER commit these) ─────────────────────────────────────────────
+.env
+
+# ── Python cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── Local runtime state files (regenerated at runtime) ───────────────────────
+trades_history.json
+ai_positions.json
+
+# ── OS / editor junk ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+

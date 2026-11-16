@@ -2507,7 +2507,7 @@
 
 
     // ---------------------------------------------------------------
-    // MARKET RADAR — polls /api/ai/market-radar every 20 s
+    // MARKET RADAR ï¿½ polls /api/ai/market-radar every 20 s
     // Shows pre-analyzed ranked opportunities even when AI is idle
     // ---------------------------------------------------------------
     async function fetchMarketRadar() {
@@ -2531,8 +2531,8 @@
 
         const scannedEl = document.getElementById('radar-coins-scanned');
         if (scannedEl && data.total_scanned > 0) {
-          const ageStr = data.last_scan_age_secs != null ? ` · ${Math.round(data.last_scan_age_secs)}s ago` : '';
-          scannedEl.textContent = `— ${data.total_scanned} pairs scanned${ageStr}`;
+          const ageStr = data.last_scan_age_secs != null ? ` ï¿½ ${Math.round(data.last_scan_age_secs)}s ago` : '';
+          scannedEl.textContent = `ï¿½ ${data.total_scanned} pairs scanned${ageStr}`;
         }
 
         const nextEl = document.getElementById('radar-next-scan');
@@ -2557,7 +2557,7 @@
             if (scoreEl) scoreEl.textContent = top.score;
             if (rsiEl)   rsiEl.textContent   = top.rsi;
             if (atrEl)   atrEl.textContent   = `${((top.atr_pct||0)*100).toFixed(2)}%`;
-            if (mtfEl)   mtfEl.textContent   = top.mtf_badge || top.mtf_confluence || '—';
+            if (mtfEl)   mtfEl.textContent   = top.mtf_badge || top.mtf_confluence || 'ï¿½';
             if (sideBadge) {
               const isShort = top.side === 'SHORT';
               sideBadge.textContent = top.side;
@@ -2577,7 +2577,7 @@
           tbody.innerHTML = `<tr><td colspan="9" class="py-5 text-center text-slate-500 font-sans text-xs">
             <span class="inline-flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-              Scanning 500+ coins — first results appear in ~15s…
+              Scanning 500+ coins ï¿½ first results appear in ~15sï¿½
             </span></td></tr>`;
           return;
         }
@@ -2605,9 +2605,9 @@
             <td class="py-2 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${sideCls}">${o.side}</span></td>
             <td class="py-2 px-3 font-bold ${scoreColor}">${sc}</td>
             <td class="py-2 px-3 ${rsiColor}">${rsiVal}</td>
-            <td class="py-2 px-3 text-slate-300">${o.vol_ratio || '—'}</td>
-            <td class="py-2 px-3 text-slate-400 text-[10px]">${(o.pattern||'—').replace('Normal','—')}</td>
-            <td class="py-2 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] font-semibold ${mtfBadge}">${o.mtf_badge || '—'}</span></td>
+            <td class="py-2 px-3 text-slate-300">${o.vol_ratio || 'ï¿½'}</td>
+            <td class="py-2 px-3 text-slate-400 text-[10px]">${(o.pattern||'ï¿½').replace('Normal','ï¿½')}</td>
+            <td class="py-2 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] font-semibold ${mtfBadge}">${o.mtf_badge || 'ï¿½'}</span></td>
             <td class="py-2 px-3 ${chgColor}">${chg}</td>
           </tr>`;
         }).join('');
